@@ -1,0 +1,19 @@
+{
+  "name": "littledj",
+  "private": true,
+  "description": "littleDJ 运行依赖（server/proxy.js 的 /_voice 语音路由用 ws；node_modules 不入库，冷环境缺失时语音路由降级中文报错，不影响其余功能）",
+  "scripts": {
+    "build:ui": "node deploy/build-ts.js",
+    "check:ui": "node deploy/check-contract.js",
+    "test": "node deploy/run-selftests.js"
+  },
+  "dependencies": {
+    "jimp": "^0.22.12",
+    "ws": "^8.22.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "sucrase": "3.35.1",
+    "typescript": "6.0.3"
+  }
+}

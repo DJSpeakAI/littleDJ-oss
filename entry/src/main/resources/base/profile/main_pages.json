@@ -1,0 +1,9 @@
+{
+  "src": [
+    "pages/Boot",
+    "pages/Login",
+    "pages/Index",
+    "pages/Probe",
+    "pages/Settings"
+  ]
+}

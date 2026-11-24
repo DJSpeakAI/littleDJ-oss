@@ -1,0 +1,21 @@
+{
+  "color": [
+    { "name": "start_window_background", "value": "#0d0e10" },
+    { "name": "bg", "value": "#0d0e10" },
+    { "name": "bg2", "value": "#111214" },
+    { "name": "panel", "value": "#141517" },
+    { "name": "card", "value": "#17191c" },
+    { "name": "card2", "value": "#1b1e21" },
+    { "name": "line", "value": "#26292e" },
+    { "name": "line2", "value": "#31353b" },
+    { "name": "text", "value": "#e7e8ea" },
+    { "name": "sub", "value": "#9ba1a8" },
+    { "name": "faint", "value": "#6c727a" },
+    { "name": "accent", "value": "#34c98b" },
+    { "name": "accent_strong", "value": "#3ee6a0" },
+    { "name": "user", "value": "#1a2733" },
+    { "name": "user_line", "value": "#263a4d" },
+    { "name": "warn", "value": "#f0b429" },
+    { "name": "err", "value": "#ff6b6b" }
+  ]
+}

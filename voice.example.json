@@ -1,0 +1,19 @@
+{
+  "_说明": "语音对话凭据模板——复制到 ~/littleDJ/config/voice.json 并填真实值（该文件在仓库外、不入 git）；proxy 读不到时 /_voice 路由中文报错不崩",
+  "volcanoKey": "<火山引擎豆包语音 API Key（X-Api-Key）>",
+  "tts": {
+    "endpoint": "https://openspeech.bytedance.com/api/v3/tts/unidirectional",
+    "resourceId": "seed-icl-2.0",
+    "fallbackResourceId": "seed-tts-2.0",
+    "fallbackVoice": "zh_female_vv_uranus_bigtts",
+    "voices": [
+      { "id": "<voice_id_a>", "name": "音色 A" },
+      { "id": "<voice_id_b>", "name": "音色 B" }
+    ]
+  },
+  "asr": {
+    "endpoint": "wss://openspeech.bytedance.com/api/v3/sauc/bigmodel_nostream",
+    "resourceId": "volc.bigasr.sauc.duration",
+    "fallbackResourceId": ""
+  }
+}

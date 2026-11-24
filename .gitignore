@@ -1,0 +1,70 @@
+node_modules/
+*.log
+logs/
+.DS_Store
+# 凭据与运行数据永不入库
+serve.cmd
+restart.cmd
+deveco.jsonc
+auth.json
+*.token
+config/
+# frp 实值配置（含 token，永不入库；仓库只留 *.example）
+frpc.ini
+frps.ini
+.htpasswd*
+# 鸿蒙工程产物（DevEco/hvigor）
+/oh_modules
+/local.properties
+/.idea
+**/build
+/.hvigor
+.cxx
+/.clangd
+/.clang-format
+/.clang-tidy
+**/.test
+/.appanalyzer
+
+# DevEco Code 本地会话数据
+.bitfun/
+
+# 临时快照不入库（根目录临时交接件；docs/归档/ 下的正式归档可入库）
+backup/
+*.bak
+# 带日期后缀的备份（*.bak 规则不覆盖）与 run/ 临时诊断产物
+*.bak-*
+run/
+/littleDJ-交接-*.md
+.taskqueue/locks/
+# task165：任务备份快照（回滚安全网）留磁盘不入库——含历史任务 files/baseline 快照与 grep 输出备份
+.taskqueue/backups/
+
+# task384（P1-6）：ui/src 的 .js=build-ts 唯一生成的编译产物（铁律：改码只许改 .ts），不入库——
+# 防止「改 .ts 忘跑 build → 仓库 .ts/.js 不一致 → 运行时用旧 .js」；新鲜度由契约闸门 C11（jsSha256 指纹）守门。
+# 新环境自举：clone 后先跑 node deploy/build-ts.js（run-selftests.js 开头已自动检测并补 build）。
+ui/src/**/*.js
+
+# task400：运行根（原主目录下的 littleDJ）搬进仓库后的落点——凭据/密码本/日志/备份全在里面，永不入库；
+# DevEco 搜索工具也靠这条规则跳过它（实测：认 git 忽略、不认隐藏目录）。
+# ⚠ 硬禁：本仓库内不许 git clean -x / -xfd（会把 runtime/ 整个删掉）。
+/runtime/
+
+# ---- 开源版加固：凭据、证书、私人记录一律不入库 ----
+# 证书与签名材料（鸿蒙工程签名请在 DevEco Studio 里自动生成）
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.cer
+*.crt
+*.pem
+*.key
+# 凭据与密码本
+auth*.txt
+apikeys*.json
+vault.key
+vault.json
+pass-hash*
+# 私人工作记录
+.taskqueue/
